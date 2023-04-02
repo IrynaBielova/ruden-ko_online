@@ -17,14 +17,16 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
     crossorigin="anonymous"
   /> -->
+  <link rel="stylesheet" href="/contactable/contactable/contactable.css" type="text/css" />
   <link rel='stylesheet' href='./sass/_common.scss' />
   <link rel='shortcut icon'
-        href='https://icon-library.com/images/movies-icon-ico/movies-icon-ico-24.jpg'
+        href='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaFBVFObCtQT5f5OnbWlBWi7mGAM-vW4M8141vAE6vwqmveEnv&s'
         type='image/x-icon' />
   <title>ruden-ko.online</title>
 </head>
 
 <body class='body__container body__background'>
+  <div id="contactable"><!-- contactable html placeholder --></div>
 <header class='header'>
   <include src='./partials/header.html'></include>
 </header>
@@ -43,5 +45,12 @@
 <!-- <include src='./partials/goit-students.html'></include> -->
 
 <script type='module' src='./index.js'></script>
+
+<!--start contactable js -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js?ver=1.7.1"></script>
+<script type="text/javascript" src="/contactable/contactable/jquery.validate.min.js"></script>
+<script type="text/javascript" src="/contactable/contactable/jquery.contactable.js"></script>
+<script type="text/javascript">$(function(){$('#contactable').contactable();});</script>
+<!--end contactable js -->
 </body>
 </html>
