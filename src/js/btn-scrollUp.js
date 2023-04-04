@@ -18,3 +18,4 @@ setInterval(function displayScrollTopBtn() {
     scrollUpBtn.style.display = 'none';
   }
 }, 300);
+

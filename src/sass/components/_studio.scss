@@ -21,25 +21,107 @@
     text-shadow:2px 2px 4px #000000;
 }
 
-.our-work__about-img{
-    @media screen and (min-width: 1200px)  {
-position: relative;
-&:not(:last-child){
-margin-right: 30px;
+
+.slideshow {
+    // width: 100%;
+    height: 550px;
+    position: relative;
+    overflow: hidden;
+    // background: #000;
+    margin: 20px 0;
 }
-    }    
-    @media screen and (max-width: 1199px)  {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 20px;
-        height: auto;
-        } 
+.slideshow-item {
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    animation: slideanim 40s infinite;
+}
+.slideshow-item:nth-child(1),
+.slideshow-item:nth-child(1) img {
+    animation-delay: 0;
+}
+.slideshow-item:nth-child(2),
+.slideshow-item:nth-child(2) img {
+    animation-delay: 10s;
+}
+.slideshow-item:nth-child(3),
+.slideshow-item:nth-child(3) img {
+    animation-delay: 20s;
+}
+.slideshow-item:nth-child(4),
+.slideshow-item:nth-child(4) img {
+    animation-delay: 30s;
+}
+.slideshow-item:nth-child(5),
+.slideshow-item:nth-child(5) img {
+    animation-delay: 40s;
+}
+.slideshow-item img {
+    // width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: zoom 40s infinite;
+    margin-left: auto;
+    @media screen and (min-width: 1200px){
+        width: 50%;
+        margin-left: auto;
+        }
+      @media screen and (min-width: 768px){
+        width: 75%;
+        margin-left: auto;
+      }
+      @media screen and (min-width: 480px){
+        width: 100%;
+        margin-left: auto;
+      }
+}
+.slideshow-item-text {
+    max-width: 50%;
+    position: absolute;
+    bottom: 20px;
+    left: 200px;
+    // background-color: rgba(0,0,0,0.7);
+    color: $text-white-color;
+    padding: 20px 30px;
+    font-family: Verdana, sans-serif;      
+}
+.slideshow-item-text p {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+@keyframes slideanim {
+    12.5%{
+        opacity: 1;
+    }
+    25%{
+        opacity: 1;
+    }   
+    37.5%{
+        opacity: 0;
+    }
+}
+@keyframes zoom {
+    50%{
+        transform: scale(1.3);
+    }   
+}
+@media screen and (max-width: 1200px){
+    .slideshow-item-text{
+        max-width: 75%;
+    }
+}
+@media screen and (max-width: 480px){
+    .slideshow-item-text {
+        bottom: 0;
+        left: 0;
+        max-width: 100%;
+    }
+    .slideshow-item-text h5 {
+        font-size: 18px;
+    }
+    .slideshow-item-text p {
+        font-size: 13px;
+    }
 }
 
-.our-work__about-list{
-    @media screen and (min-width: 1200px)  {
-    display: flex;
-    align-items: center;
-    } 
-}
